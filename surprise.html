@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EVİNE Hoşgeldin!</title>
+    <link rel="stylesheet" href="sur.css">
+  </head>
+  <body>
+    <main>
+        <audio controls>
+            <source src="muzik1.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="myAudio"></audio>
+<script>
+var playlist = [  "i will.mp3"];
+
+var currentSong = 0;
+var audio = document.getElementById("myAudio");
+audio.src = playlist[currentSong];
+
+audio.onended = function() {
+  currentSong++;
+  if (currentSong >= playlist.length) {
+    currentSong = 0;
+  }
+  audio.src = playlist[currentSong];
+  audio.play();
+};
+
+audio.play();
+</script>          
+      <section class="hero">
+        <div class="hero-text">
+          <h1 class="title">Evine hoşgeldiiiiinnnn!</h1>
+            <div class="askim">Benim canım aşkım ORHANGAZİde mi şimdih :( </div>
+            <div class="askim"> SENİ ÇOK AMA ÇOK SEVİYORUM BİDENEM!!!!!!!!!!!</div>
+            <div class="askimh"> SANA KAHVE YAPTIM ALIR MISIN BEBİŞKOM? lütfen al </div>
+        </div>
+        <div class="coffee-image">
+          <img src="giphy.gif" alt="kahve animasyonu">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Telif Hakkı © 2023 | Bu site MERTİNKİ tarafından hazırlanmıştır.</p>
+    </footer>
+  </body>
+</html>
